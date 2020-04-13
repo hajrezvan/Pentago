@@ -2,10 +2,7 @@ public class Action {
 
     private static boolean resumeGame;
 
-    public static int steps;
-
     public Action(){
-        steps = 0;
         resumeGame = true;
     }
 
