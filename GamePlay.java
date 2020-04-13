@@ -1,22 +1,25 @@
 import java.util.Scanner;
 
 /**
- * This is main class and game from hear.
+ * This is main class and game starts from hear.
  * This class have "main" method that start any thing in program from hear.
- * this class control the game map and represent status of map.
+ * this class control the game map and represent status of map and counter
+ *  steps of game.
+ * @version 0.0
+ * @author Rezvanian 9831029
  */
 public class GamePlay {
 
-    //constant variable, size of map
+    //Constant variable, size of map
     private static final int SIZE = 7;
 
-    //for developer
+    //For developer
     private static String[][] map;
 
-    //for user
+    //For user
     private static String[][] visualMap;
 
-    //for counter step of game
+    //Counter step of game
     private static int steps;
 
     /**
@@ -77,14 +80,25 @@ public class GamePlay {
         }
     }
 
+    /**
+     * This method return steps of game.
+     */
     public static int getSteps() {
         return steps;
     }
 
+    /**
+     * This method increase steps of game.
+     * */
     public static void setSteps() {
         GamePlay.steps++;
     }
 
+    /**
+     * This method set nuts in map and visualMap.
+     * @param x is x position in map.
+     * @param y is y position in map.
+     * */
     public static void setNutsInMap(int x, int y){
         map[y][x] = Action.getCharacter();
         visualMap[(y + 1) * 4][(x + 1) * 8] = map[y][x];
