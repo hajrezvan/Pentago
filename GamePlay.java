@@ -82,7 +82,7 @@ public class GamePlay {
 
     public static void setNutsInMap(int x, int y){
         map[y][x] = Action.getCharacter();
-        visualMap[(y + 1) * 4][(x + 1) * 8] = Action.getCharacter();
+        visualMap[(y + 1) * 4][(x + 1) * 8] = map[y][x];
         Action.steps++;
     }
 
