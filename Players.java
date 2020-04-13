@@ -5,7 +5,7 @@ public class Players extends Action {
     public Players() {
         int colorKey; //If is 0; color is black.
 
-        if (steps % 2 == 0){
+        if (GamePlay.getSteps() % 2 == 0){
             colorKey = 1;
         }else {
             colorKey = 0;
