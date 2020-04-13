@@ -107,7 +107,7 @@ public class GamePlay {
 
     /*--------------------------------------------------------------------------------------------------*/
     /**
-     * This is main method and game start from hear.
+     * This is main method and game starts from hear.
      */
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Welcome players!");
