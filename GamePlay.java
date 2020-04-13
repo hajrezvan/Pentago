@@ -10,15 +10,20 @@ public class GamePlay {
     //constant variable, size of map
     private static final int SIZE = 7;
 
+    //for developer
     private static String[][] map;
 
     //for user
     private static String[][] visualMap;
 
+    //for counter step of game
+    private static int steps;
+
     /**
      * This method initialise the map.
      */
     public static void initialisingMap(){
+        steps = 0;
         //for programmer
         map = new String[SIZE][SIZE];
         for (int i = 0; i < SIZE; i++){
@@ -72,18 +77,18 @@ public class GamePlay {
         }
     }
 
-    public static void setVisualMap(String[][] visualMap) {
-        GamePlay.visualMap = visualMap;
+    public static int getSteps() {
+        return steps;
     }
 
-    public static void setMap(String[][] map) {
-        GamePlay.map = map;
+    public static void setSteps() {
+        GamePlay.steps++;
     }
 
     public static void setNutsInMap(int x, int y){
         map[y][x] = Action.getCharacter();
         visualMap[(y + 1) * 4][(x + 1) * 8] = map[y][x];
-        Action.steps++;
+        setSteps();
     }
 
     /*--------------------------------------------------------------------------------------------------*/
