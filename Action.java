@@ -1,6 +1,6 @@
 /**
- * This class has one field for resume game and set and get nuts.
- * This class checks that nuts is white or nut.
+ * This class represent status of nuts and set them in map and
+ *  check that game over or not.
  * @version 0.0
  * @author Rezvanian 9831029
  * */
@@ -29,7 +29,7 @@ public class Action {
     /**
      * This class check color of nut that user want set its in map.
      * This class by construct a object from "Players" class and
-     *  call own of method that this object has.
+     *  call one of method that this object has.
      * */
     public static String getCharacter(){
         Players player = new Players();
